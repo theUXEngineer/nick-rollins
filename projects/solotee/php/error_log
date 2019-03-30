@@ -1,0 +1,33 @@
+[28-Jul-2015 14:58:29] PHP Parse error:  syntax error, unexpected '>' in /home4/nick/public_html/solotee.com/php/index.php on line 5
+[28-Jul-2015 15:03:05] PHP Parse error:  syntax error, unexpected $end in /home4/nick/public_html/solotee.com/php/index.php on line 5
+[28-Jul-2015 15:04:13] PHP Parse error:  syntax error, unexpected $end in /home4/nick/public_html/solotee.com/php/index.php on line 5
+[28-Jul-2015 15:04:15] PHP Parse error:  syntax error, unexpected $end in /home4/nick/public_html/solotee.com/php/index.php on line 5
+[28-Jul-2015 15:08:17] PHP Parse error:  syntax error, unexpected T_ECHO in /home4/nick/public_html/solotee.com/php/index.php on line 6
+[28-Jul-2015 15:50:35] PHP Parse error:  syntax error, unexpected '}' in /home4/nick/public_html/solotee.com/php/index.php on line 5
+[28-Jul-2015 15:50:54] PHP Parse error:  syntax error, unexpected '}' in /home4/nick/public_html/solotee.com/php/index.php on line 7
+[28-Jul-2015 15:50:57] PHP Parse error:  syntax error, unexpected '}' in /home4/nick/public_html/solotee.com/php/index.php on line 7
+[28-Jul-2015 15:51:17] PHP Parse error:  syntax error, unexpected '}' in /home4/nick/public_html/solotee.com/php/index.php on line 7
+[28-Jul-2015 15:52:05] PHP Parse error:  syntax error, unexpected '}' in /home4/nick/public_html/solotee.com/php/index.php on line 7
+[28-Jul-2015 15:52:08] PHP Parse error:  syntax error, unexpected '}' in /home4/nick/public_html/solotee.com/php/index.php on line 7
+[28-Jul-2015 16:03:27] PHP Parse error:  syntax error, unexpected T_WHILE in /home4/nick/public_html/solotee.com/php/index.php on line 7
+[28-Jul-2015 16:03:54] PHP Parse error:  syntax error, unexpected T_WHILE in /home4/nick/public_html/solotee.com/php/index.php on line 7
+[28-Jul-2015 16:03:57] PHP Parse error:  syntax error, unexpected T_WHILE in /home4/nick/public_html/solotee.com/php/index.php on line 7
+[28-Jul-2015 16:04:59] PHP Parse error:  syntax error, unexpected T_WHILE in /home4/nick/public_html/solotee.com/php/index.php on line 7
+[28-Jul-2015 16:05:44] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /home4/nick/public_html/solotee.com/php/index.php on line 9
+[28-Jul-2015 16:05:56] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home4/nick/public_html/solotee.com/php/index.php on line 9
+[28-Jul-2015 16:06:08] PHP Parse error:  syntax error, unexpected '>' in /home4/nick/public_html/solotee.com/php/index.php on line 9
+[28-Jul-2015 16:06:17] PHP Parse error:  syntax error, unexpected '>' in /home4/nick/public_html/solotee.com/php/index.php on line 9
+[28-Jul-2015 16:15:54] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home4/nick/public_html/solotee.com/php/index.php on line 14
+[28-Jul-2015 16:16:18] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home4/nick/public_html/solotee.com/php/index.php on line 14
+[28-Jul-2015 16:16:25] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home4/nick/public_html/solotee.com/php/index.php on line 14
+[28-Jul-2015 16:37:36] PHP Fatal error:  Call to undefined function  print_() in /home4/nick/public_html/solotee.com/php/index.php on line 3
+[28-Jul-2015 17:29:55] PHP Parse error:  syntax error, unexpected T_VARIABLE, expecting ',' or ';' in /home4/nick/public_html/solotee.com/php/index.php on line 26
+[28-Jul-2015 17:30:11] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home4/nick/public_html/solotee.com/php/index.php on line 36
+[28-Jul-2015 18:15:20] PHP Parse error:  syntax error, unexpected '}' in /home4/nick/public_html/solotee.com/php/index.php on line 8
+[28-Jul-2015 18:25:38] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home4/nick/public_html/solotee.com/php/index.php on line 17
+[28-Jul-2015 18:27:08] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home4/nick/public_html/solotee.com/php/index.php on line 17
+[28-Jul-2015 18:38:45] PHP Parse error:  syntax error, unexpected '}' in /home4/nick/public_html/solotee.com/php/index.php on line 28
+[28-Jul-2015 18:40:12] PHP Parse error:  syntax error, unexpected '}' in /home4/nick/public_html/solotee.com/php/index.php on line 28
+[28-Jul-2015 18:55:13] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home4/nick/public_html/solotee.com/php/index.php on line 24
+[28-Jul-2015 18:57:21] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home4/nick/public_html/solotee.com/php/index.php on line 26
+[28-Jul-2015 18:57:27] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home4/nick/public_html/solotee.com/php/index.php on line 26

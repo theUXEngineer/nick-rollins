@@ -1,0 +1,4 @@
+[28-Jul-2015 19:32:05] PHP Parse error:  syntax error, unexpected ':' in /home4/nick/public_html/solotee.com/index.php on line 21
+[28-Jul-2015 19:32:33] PHP Parse error:  syntax error, unexpected T_STRING in /home4/nick/public_html/solotee.com/index.php on line 23
+[28-Jul-2015 19:34:09] PHP Parse error:  syntax error, unexpected T_CLASS in /home4/nick/public_html/solotee.com/index.php on line 23
+[28-Jul-2015 19:35:12] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home4/nick/public_html/solotee.com/index.php on line 23
