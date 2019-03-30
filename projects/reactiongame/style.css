@@ -1,0 +1,16 @@
+        
+    body {
+    font-family: "open sans";
+    }
+    
+    #box {
+    width: 250px;
+    height: 250px;
+    background-color: gray;
+    display: none;
+    position: relative;
+    }
+
+    .bold {
+    font-weight: bold;
+    }
