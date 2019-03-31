@@ -1,0 +1,70 @@
+//Color Scheme
+$white:#F9FAFB;
+$black: #000000;
+
+$gray-light: darken($white, 15% );
+$gray-med: darken($white, 50% );
+$gray-dark: darken($white, 75%);
+
+$primary: #354bd6;
+$tint-light: lighten($primary, 30%);
+$tint-dark: darken($primary, 30%);
+
+$cta: #ffa500;
+
+//box shadow
+@mixin box-shadow {
+    -webkit-box-shadow: 0px 6px 16px -6px rgba(47, 59, 71, 1);
+	-moz-box-shadow: 0px 6px 16px -6px rgba(47, 59, 71, 1);
+	box-shadow: 0px 6px 16px -6px rgba(47, 59, 71, 1);
+}
+
+@mixin box-shadow-grow {
+    -webkit-box-shadow: 0px 8px 20px -8px rgba(47, 59, 71, 1);
+    -moz-box-shadow: 0px 8px 20px -8px rgba(47, 59, 71, 1);
+    box-shadow: 0px 8px 20px -8px rgba(47, 59, 71, 1);
+}
+
+//Content Width
+$content-width: 1200px;
+
+//Spacing Progression
+$xs: 4px;
+$s: 8px;
+$m: 16px;
+$l: 32px;
+$xl: 64px;
+$xxl: 128px;
+
+$xs-inset-square: $xs;
+$s-inset-square: $s;
+$m-inset-square: $m;
+$l-inset-square: $l;
+$xl-inset-square: $xl;
+$xxl-inset-square: $xxl;
+
+$s-inset-squish: $xs $s;
+$m-inset-squish: $s $m;
+$l-inset-squish: $m $l;
+$xl-inset-squish: $l $xl;
+$xxl-inset-squish: $xl $xxl;
+
+$xs-inset-stretch: $s $xs;
+$s-inset-stretch: $m $s;
+$m-inset-stretch: $l $m;
+$l-inset-stretch: $xl $l;
+$xl-inset-stretch: $xxl $xl;
+
+$xs-stack: 0 0 $xs 0;
+$s-stack: 0 0 $s 0;
+$m-stack: 0 0 $m 0;
+$l-stack: 0 0 $l 0;
+$xl-stack: 0 0 $xl 0;
+$xxl-stack: 0 0 $xxl 0;
+
+$xs-inline: 0 $xs 0 0;
+$s-inline: 0 $s 0 0;
+$m-inline: 0 $m 0 0;
+$l-inline: 0 $l 0 0;
+$xl-inline: 0 $xl 0 0;
+$xxl-inline: 0 $xxl 0 0;
