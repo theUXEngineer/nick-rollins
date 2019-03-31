@@ -1,0 +1,101 @@
+@import "_variables.scss";
+.hero {
+	background: $primary;
+	background: url(/dist/images/nick-rollins-hero-mobile-bg.png);
+	background-size: cover;
+	background-position: center;
+	min-height: 400px;
+	margin: $xxl-stack;
+	padding: $m-inset-square;
+	position: relative;
+
+	@media (min-width: 400px) {
+		padding: $l-inset-square;
+	}
+
+	@media (min-width: 600px) {
+		padding: $xl-inset-square;
+	}
+
+	@media (min-width: 800px) {
+		background: url(/dist/images/nick-rollins-hero-bg.png);
+		background-position: center;
+		background-size: cover;
+		margin: 0;
+	}
+
+	&-card {
+		position: absolute;
+		bottom: -165px;
+		padding: $l-inset-square;
+		width: calc(100% - 32px);
+
+		@media (min-width: 400px) {
+			width: calc(100% - 64px);
+		}
+
+		@media (min-width: 600px) {
+			padding: $xl-inset-squish;
+			width: calc(100% - 128px);
+		}
+
+		@media (min-width: 800px) {
+			position: static;
+		}
+	}
+}
+
+.section-new {
+    padding: 0 $m;
+    
+    @media (min-width: 400px) {
+		padding: 0 $l;
+	}
+
+	@media (min-width: 600px) {
+		padding: 0 $xl;
+	}
+}
+
+.new-link {
+	padding: $xl-inset-squish;
+	position: relative;
+
+	&:last-of-type {
+		margin: 0 auto $l;
+	}
+
+	&:before {
+		@include box-shadow;
+		content: 'NEW';
+		background: $primary;
+		top: -16px;
+		left: -16px;
+		border-radius: 50%;
+		width: 64px;
+		height: 64px;
+		position: absolute;
+		text-align: center;
+		line-height: 64px;
+		color: #fff;
+		font-weight: 700;
+		transform: rotate(-24deg);
+	}
+
+	&:after {
+		content: '';
+		border: $gray-dark solid;
+		border-width: 4px 4px 0 0;
+		right: 32px;
+		top: calc(50% - 8px);
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		transition: all 250ms;
+		transform: rotate(45deg);
+	}
+
+	p {
+		margin: 0;
+	}
+}

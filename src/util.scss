@@ -1,0 +1,134 @@
+@import "_variables.scss";
+//Utility CLasses
+
+.content-width {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;
+}
+.body-text-width {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.card-list {
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: 800px) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+
+.card {
+	@include box-shadow;
+	background: $white;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: block;
+	margin: $l-stack;
+	padding: $l-inset-square;
+	transition: all 250ms;
+	width: 100%;
+	&.half {
+		@media (min-width: 800px) {
+			width: calc(100%/2);
+		}
+	}
+	&.third {
+		@media (min-width: 800px) {
+			width: calc(100%/3);
+		}
+	}
+	&.fourth {
+		@media (min-width: 800px) {
+			width: calc(50% - 16px);
+		}
+	}
+
+	&.no-hover {
+		&:hover {
+			@include box-shadow;
+			transform: none;
+			cursor: default;
+		}
+	}
+
+	&:last-of-type {
+		margin-right: 0;
+	}
+
+	&:hover {
+		@include box-shadow-grow;
+		transform: translateY(-4px);
+	}
+}
+
+.thumb-card {
+	@include box-shadow;
+	background: $white;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: block;
+	margin: $l-stack;
+	padding: 0;
+	transition: all 250ms;
+	width: 100%;
+
+	&:hover {
+		@include box-shadow-grow;
+		cursor: pointer;
+		transform: translateY(-4px);
+	}
+
+	&.third-inline {
+		@media (min-width: 800px) {
+			width: calc((100%/3) - 16px);
+		}
+	}
+
+	&.fourth-inline {
+		@media (min-width: 800px) {
+			width: calc(50% - 16px);
+		}
+		@media (min-width: 1000px) {
+			width: calc(25% - 16px);
+		}
+	}
+
+	&-thumb {
+		height: 200px;
+
+		&.ecommerce {
+			background: url('/dist/images/selfhelpy-thumb.png');
+			background-size: cover;
+			background-position: center;
+		}
+		&.learning {
+			background: url('/dist/images/calendo-thumb.png');
+			background-size: cover;
+			background-position: center;
+		}
+		&.research {
+			background: url('/dist/images/tetris-thumb.png');
+			background-size: cover;
+			background-position: center;
+		}
+		&.side {
+			background: url('/dist/images/uxe-thumb.jpg');
+			background-size: cover;
+			background-position: center;
+		}
+	}
+	&-content {
+		padding: $l-inset-squish;
+	}
+}
+.text-center {
+	text-align: center;
+}
+
+.text-white {
+	color: $white;
+}

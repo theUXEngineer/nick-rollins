@@ -1,275 +1,10 @@
 @import "_variables.scss";
 @import "reset.scss";
 @import "base-styles.scss";
+@import "util.scss";
+@import "header.scss";
+@import "atf.scss";
 
-//Utility CLasses
-
-.content-width {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 1000px;
-}
-.body-text-width {
-	max-width: 800px;
-	margin: 0 auto;
-}
-.card-list {
-	display: flex;
-	flex-direction: column;
-
-	@media (min-width: 800px) {
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-}
-
-.card {
-	@include box-shadow;
-	background: $white;
-	border-radius: 4px;
-	box-sizing: border-box;
-	display: block;
-	margin: $l-stack;
-	padding: $l-inset-square;
-	transition: all 250ms;
-	width: 100%;
-	&.half {
-		@media (min-width: 800px) {
-			width: calc(100%/2);
-		}
-	}
-	&.third {
-		@media (min-width: 800px) {
-			width: calc(100%/3);
-		}
-	}
-	&.fourth {
-		@media (min-width: 800px) {
-			width: calc(50% - 16px);
-		}
-	}
-
-	&.no-hover {
-		&:hover {
-			@include box-shadow;
-			transform: none;
-			cursor: default;
-		}
-	}
-
-	&:last-of-type {
-		margin-right: 0;
-	}
-
-	&:hover {
-		@include box-shadow-grow;
-		transform: translateY(-4px);
-	}
-}
-
-.thumb-card {
-	@include box-shadow;
-	background: $white;
-	border-radius: 4px;
-	box-sizing: border-box;
-	display: block;
-	margin: $l-stack;
-	padding: 0;
-	transition: all 250ms;
-	width: 100%;
-
-	&:hover {
-		@include box-shadow-grow;
-		cursor: pointer;
-		transform: translateY(-4px);
-    }
-    
-    &.third-inline {
-		@media (min-width: 800px) {
-			width: calc((100%/3) - 16px);
-		}
-	}
-
-	&.fourth-inline {
-		@media (min-width: 800px) {
-			width: calc(50% - 16px);
-		}
-		@media (min-width: 1000px) {
-			width: calc(25% - 16px);
-		}
-	}
-
-	&-thumb {
-		height: 200px;
-
-		&.ecommerce {
-			background: url('/dist/images/selfhelpy-thumb.png');
-			background-size: cover;
-			background-position: center;
-		}
-		&.learning {
-			background: url('/dist/images/calendo-thumb.png');
-			background-size: cover;
-			background-position: center;
-		}
-		&.research {
-			background: url('/dist/images/tetris-thumb.png');
-			background-size: cover;
-			background-position: center;
-		}
-		&.side {
-			background: url('/dist/images/uxe-thumb.jpg');
-			background-size: cover;
-			background-position: center;
-		}
-	}
-	&-content {
-		padding: $l-inset-squish;
-	}
-}
-.text-center {
-	text-align: center;
-}
-
-.text-white {
-	color: $white;
-}
-
-//Classes
-
-.header {
-	@include box-shadow;
-	background: $black;
-	border-bottom: 8px $tint-light solid;
-	color: $white;
-
-	&-nav {
-		display: flex;
-		justify-content: center;
-		margin: 0 auto;
-		max-width: 1032px;
-
-		@media (min-width: 800px) {
-			justify-content: space-between;
-		}
-
-		&-list {
-			display: none;
-
-			@media (min-width: 800px) {
-				display: block;
-			}
-		}
-
-		&-link {
-			color: $white;
-			line-height: 1;
-			padding: 24px $m;
-			position: relative;
-			text-decoration: none;
-			text-align: center;
-
-			&:hover {
-				background: $gray-dark;
-			}
-		}
-	}
-
-	&-nav-item {
-		display: inline-block;
-
-		&-link {
-			border: none;
-			background: none;
-			display: block;
-			width: 90px;
-		}
-	}
-}
-
-.logo {
-	&-icon {
-		color: $cta;
-	}
-}
-
-.hero {
-    background-color: $primary;
-    background: url(/dist/images/nick-rollins-hero-mobile-bg.png);
-    background-size: cover;
-    background-position: center;
-	min-height: 400px;
-	padding: $xl-inset-square;
-	margin: $xxl-stack;
-	position: relative;
-
-	@media (min-width: 800px) {
-        background: url(/dist/images/nick-rollins-hero-bg.png);
-        background-position: center;
-        background-size: cover;
-		margin: 0;
-	}
-
-	&-card {
-		margin-right: 0;
-		padding: $xl-inset-squish;
-		position: absolute;
-		bottom: -128px;
-		width: calc(100% - 128px);
-
-		@media (min-width: 800px) {
-			position: static;
-		}
-	}
-}
-
-.section-new {
-	padding: 0 $xl;
-}
-
-.new-link {
-	padding: $xl-inset-squish;
-	position: relative;
-
-	&:last-of-type {
-		margin: 0 auto $l;
-	}
-
-	&:before {
-		@include box-shadow;
-		content: 'NEW';
-		background: $primary;
-		top: -16px;
-		left: -16px;
-		border-radius: 50%;
-		width: 64px;
-		height: 64px;
-		position: absolute;
-		text-align: center;
-		line-height: 64px;
-		color: #fff;
-		font-weight: 700;
-		transform: rotate(-24deg);
-	}
-
-	&:after {
-		content: '';
-		border: $gray-dark solid;
-		border-width: 4px 4px 0 0;
-		right: 32px;
-		top: calc(50% - 8px);
-		width: 16px;
-		height: 16px;
-		position: absolute;
-		transition: all 250ms;
-		transform: rotate(45deg);
-	}
-
-	p {
-		margin: 0;
-	}
-}
 
 .main-content {
 	padding: $xl 0 0;
@@ -287,7 +22,15 @@
 .section-about {
 	&-wrapper {
 		background: $gray-dark;
-		padding: $xl-inset-square;
+        padding: $m-inset-square;
+        
+        @media (min-width: 400px) {
+            padding: $l-inset-square;
+        }
+    
+        @media (min-width: 600px) {
+            padding: $xl-inset-square;
+        }
 	}
 
 	&-list {
@@ -305,17 +48,37 @@
 }
 
 .section-work {
-	padding: $xl $xl 0;
+    padding: $m $m 0;
+    
+    @media (min-width: 400px) {
+        padding: $l $l 0;
+    }
+
+    @media (min-width: 600px) {
+        padding: $xl $xl 0;
+    }
 }
 
 .section-blog {
-	padding: $xl-inset-square;
-	margin: $xl-stack;
+	padding: $m-inset-square;
+    margin: $xl-stack;
+    
+    @media (min-width: 400px) {
+        padding: $l-inset-square;
+    }
+
+    @media (min-width: 600px) {
+        padding: $xl-inset-square;
+    }
 
 	&-card {
-        background: url('/dist/images/uxe-bg.png');
-        padding: $xl-inset-square;
-		position: relative;
+		background: url('/dist/images/uxe-bg.png');
+		padding: $l-inset-square;
+        position: relative;
+    
+        @media (min-width: 600px) {
+            padding: $xl-inset-square;
+        }
 
 		&:last-of-type {
 			margin: 0 auto;
@@ -346,7 +109,7 @@
 		}
 
 		&-list {
-            color: $white;
+			color: $white;
 			list-style: disc;
 			margin-left: 24px;
 
@@ -359,7 +122,7 @@
 				text-decoration: none;
 
 				&:hover {
-                    cursor: pointer;
+					cursor: pointer;
 					text-decoration: underline;
 				}
 			}
@@ -380,7 +143,11 @@
 
 .section-contact {
 	background: $primary;
-	padding: $xxl $xl;
+    padding: $xl $m;
+    
+    @media (min-width: 400px) {
+        padding: $xxl $xl;
+    }
 
 	h2,
 	p {

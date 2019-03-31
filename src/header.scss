@@ -1,0 +1,58 @@
+@import "_variables.scss";
+
+.header {
+	@include box-shadow;
+	background: $black;
+	border-bottom: 8px $tint-light solid;
+	color: $white;
+
+	&-nav {
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+		max-width: 1032px;
+
+		@media (min-width: 800px) {
+			justify-content: space-between;
+		}
+
+		&-list {
+			display: none;
+
+			@media (min-width: 800px) {
+				display: block;
+			}
+		}
+
+		&-link {
+			color: $white;
+			line-height: 1;
+			padding: 24px $m;
+			position: relative;
+			text-decoration: none;
+			text-align: center;
+
+			&:hover {
+				background: $gray-dark;
+			}
+		}
+	}
+
+	&-nav-item {
+		display: inline-block;
+
+		&-link {
+			border: none;
+			background: none;
+			display: block;
+			font-size: 16px;
+			width: 90px;
+		}
+	}
+}
+
+.logo {
+	&-icon {
+		color: $cta;
+	}
+}
