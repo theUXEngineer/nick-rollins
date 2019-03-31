@@ -1,6 +1,8 @@
 @import "_variables.scss";
+@import "header.scss";
+
 .hero {
-	background: $primary;
+	background-color: $primary;
 	background: url(/dist/images/nick-rollins-hero-mobile-bg.png);
 	background-size: cover;
 	background-position: center;
