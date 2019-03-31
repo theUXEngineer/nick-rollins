@@ -23,6 +23,7 @@
 		justify-content: space-between;
 	}
 }
+
 .card {
 	@include box-shadow;
 	background: $white;
@@ -48,22 +49,14 @@
 			width: calc(50% - 16px);
 		}
 	}
-	&.fourth-inline {
-		@media (min-width: 800px) {
-			width: calc(50% - 16px);
+
+	&.no-hover {
+		&:hover {
+			@include box-shadow;
+			transform: none;
+			cursor: default;
 		}
-		@media (min-width: 1000px) {
-			width: calc(25% - 16px);
-		}
-    }
-    
-    &.no-hover {
-        &:hover {
-            @include box-shadow;
-            transform: none;
-            cursor: default;
-        }
-    }
+	}
 
 	&:last-of-type {
 		margin-right: 0;
@@ -72,6 +65,67 @@
 	&:hover {
 		@include box-shadow-grow;
 		transform: translateY(-4px);
+	}
+}
+
+.thumb-card {
+	@include box-shadow;
+	background: $white;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: block;
+	margin: $l-stack;
+	padding: 0;
+	transition: all 250ms;
+	width: 100%;
+
+	&:hover {
+		@include box-shadow-grow;
+		cursor: pointer;
+		transform: translateY(-4px);
+    }
+    
+    &.third-inline {
+		@media (min-width: 800px) {
+			width: calc((100%/3) - 16px);
+		}
+	}
+
+	&.fourth-inline {
+		@media (min-width: 800px) {
+			width: calc(50% - 16px);
+		}
+		@media (min-width: 1000px) {
+			width: calc(25% - 16px);
+		}
+	}
+
+	&-thumb {
+		height: 200px;
+
+		&.ecommerce {
+			background: url('/dist/images/selfhelpy-thumb.png');
+			background-size: cover;
+			background-position: center;
+		}
+		&.learning {
+			background: url('/dist/images/calendo-thumb.png');
+			background-size: cover;
+			background-position: center;
+		}
+		&.research {
+			background: url('/dist/images/tetris-thumb.png');
+			background-size: cover;
+			background-position: center;
+		}
+		&.side {
+			background: url('/dist/images/uxe-thumb.jpg');
+			background-size: cover;
+			background-position: center;
+		}
+	}
+	&-content {
+		padding: $l-inset-squish;
 	}
 }
 .text-center {
@@ -141,27 +195,32 @@
 }
 
 .hero {
-	background: $primary;
+    background-color: $primary;
+    background: url(/dist/images/nick-rollins-hero-mobile-bg.png);
+    background-size: cover;
+    background-position: center;
 	min-height: 400px;
 	padding: $xl-inset-square;
 	margin: $xxl-stack;
-    position: relative;
-    
-    @media (min-width: 800px) {
-        margin: 0;
-    }    
+	position: relative;
+
+	@media (min-width: 800px) {
+        background: url(/dist/images/nick-rollins-hero-bg.png);
+        background-position: center;
+        background-size: cover;
+		margin: 0;
+	}
 
 	&-card {
-		margin-left: auto;
 		margin-right: 0;
 		padding: $xl-inset-squish;
 		position: absolute;
 		bottom: -128px;
-        width: calc(100% - 128px);
-        
-        @media (min-width: 800px) {
-            position: static;
-        }
+		width: calc(100% - 128px);
+
+		@media (min-width: 800px) {
+			position: static;
+		}
 	}
 }
 
@@ -233,7 +292,7 @@
 
 	&-list {
 		margin-top: -128px;
-		margin-bottom: $xl;
+		margin-bottom: $l;
 
 		& h3 {
 			font-size: 1.5rem;
@@ -246,7 +305,7 @@
 }
 
 .section-work {
-	padding: $xl-inset-square;
+	padding: $xl $xl 0;
 }
 
 .section-blog {
@@ -254,6 +313,8 @@
 	margin: $xl-stack;
 
 	&-card {
+        background: url('/dist/images/uxe-bg.png');
+        padding: $xl-inset-square;
 		position: relative;
 
 		&:last-of-type {
@@ -261,26 +322,31 @@
 		}
 	}
 	&-content {
+		a,
+		p,
+		h6 {
+			color: $white;
+		}
 		@media (min-width: 900px) {
 			width: calc(100% - 250px);
 		}
 
 		&-heading-link {
+			color: $white;
 			text-decoration: none;
-			color: $black;
 
 			&:hover {
-				color: $primary;
+				text-decoration: underline;
 			}
 		}
 
 		&-link-icon {
-			color: $gray-light;
 			font-size: 1.5rem;
 			vertical-align: top;
 		}
 
 		&-list {
+            color: $white;
 			list-style: disc;
 			margin-left: 24px;
 
@@ -288,13 +354,14 @@
 				margin: $s-stack;
 			}
 
-			& a {
-				color: $primary;
+			&-link {
+				color: $white;
 				text-decoration: none;
-			}
 
-			& a:hover {
-				text-decoration: underline;
+				&:hover {
+                    cursor: pointer;
+					text-decoration: underline;
+				}
 			}
 		}
 	}
@@ -305,7 +372,7 @@
 		@media (min-width: 900px) {
 			display: block;
 			position: absolute;
-			right: 32px;
+			right: 64px;
 			top: -64px;
 		}
 	}
