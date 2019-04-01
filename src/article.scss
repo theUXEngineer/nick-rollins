@@ -1,0 +1,29 @@
+@import "_variables.scss";
+@import "reset.scss";
+@import "base-styles.scss";
+@import "util.scss";
+@import "article-header.scss";
+@import "article-atf.scss";
+
+.main-content {
+    padding: $m-inset-stretch;
+    
+    @media (min-width: 400px) {
+        padding: $l-inset-square;
+    }
+
+    @media (min-width: 600px) {
+        padding: $xl-inset-squish;
+    }
+}
+
+.article-bg {
+    margin: 0 auto 32px;
+    padding: $xl-inset-squish;
+
+    &:last-of-type {
+        margin-right: auto;
+    }
+}
+
+@import "footer.scss";

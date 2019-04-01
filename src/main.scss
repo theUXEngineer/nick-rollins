@@ -73,11 +73,16 @@
 	&-card {
 		background: url('/dist/images/uxe-bg.png');
 		padding: $l-inset-square;
-        position: relative;
+		position: relative;
+		text-decoration: none;
     
         @media (min-width: 600px) {
             padding: $xl-inset-square;
-        }
+		}
+		
+		& h3 {
+			color: $white;
+		}
 
 		&:last-of-type {
 			margin: 0 auto;
@@ -85,46 +90,17 @@
 	}
 	&-content {
 		a,
-		p,
-		h6 {
+		p {
 			color: $white;
 		}
 		@media (min-width: 900px) {
 			width: calc(100% - 250px);
 		}
 
-		&-heading-link {
-			color: $white;
-			text-decoration: none;
-
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-
 		&-link-icon {
 			font-size: 1.5rem;
 			vertical-align: top;
-		}
-
-		&-list {
-			color: $white;
-			list-style: disc;
-			margin-left: 24px;
-
-			& li {
-				margin: $s-stack;
-			}
-
-			&-link {
-				color: $white;
-				text-decoration: none;
-
-				&:hover {
-					cursor: pointer;
-					text-decoration: underline;
-				}
-			}
+			margin: 0 0 0 $xs;
 		}
 	}
 
@@ -140,70 +116,7 @@
 	}
 }
 
-.section-contact {
-	background: $primary;
-    padding: $xl $m;
-    
-    @media (min-width: 400px) {
-        padding: $xxl $xl;
-    }
-
-	h2,
-	p {
-		color: $white;
-	}
-	h2 {
-		margin: $l-stack;
-	}
-
-	p {
-		margin: 0 auto 64px;
-	}
-
-	&-list {
-		display: flex;
-		font-size: 48px;
-		justify-content: center;
-
-		&-icon {
-			margin: $l-inline;
-
-			&:last-child {
-				margin: 0;
-			}
-		}
-
-		&-icon a {
-			&:hover {
-				cursor: pointer;
-				color: $tint-light;
-			}
-		}
-
-		& .email-copy {
-			border: none;
-			background: none;
-
-			& i {
-				font-size: 3rem;
-			}
-
-			&:hover {
-				cursor: pointer;
-				color: $tint-light;
-			}
-		}
-	}
-}
-
-footer {
-	background: $black;
-	padding: $m-inset-square;
-
-	& span {
-		display: block;
-	}
-}
+@import "footer.scss";
 
 .alert {
 	position: absolute;

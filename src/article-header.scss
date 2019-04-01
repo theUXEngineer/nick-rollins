@@ -1,12 +1,12 @@
 @import "_variables.scss";
 
-.header {
+.article-header {
 	@include box-shadow;
-	background: $black;
+	background: $primary;
 	border-bottom: 8px $tint-light solid;
-	color: $white;
-
-	&-nav {
+    color: $white;
+    
+    &-nav {
 		display: flex;
 		justify-content: center;
 		margin: 0 auto;
@@ -33,7 +33,7 @@
 			text-align: center;
 
 			&:hover {
-				background: $gray-dark;
+				background: $tint-light;
 			}
 		}
 	}
