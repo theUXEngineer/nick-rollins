@@ -19,7 +19,11 @@
 
 .article-bg {
     margin: 0 auto 32px;
-    padding: $xl-inset-squish;
+    padding: $l-inset-square;
+
+    @media (min-width: 800px) {
+        padding: $xl-inset-squish;
+    }
 
     &:last-of-type {
         margin-right: auto;

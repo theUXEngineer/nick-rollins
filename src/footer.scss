@@ -27,9 +27,13 @@
 		justify-content: center;
 
 		&-icon {
-			margin: $l-inline;
+			margin: $m-inline;
 
-			&:last-child {
+			@media (min-width: 600px) {
+				margin: $l-inline;
+			}
+
+			&:last-of-type {
 				margin: 0;
 			}
 		}
