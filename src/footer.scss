@@ -99,3 +99,23 @@ footer {
 		display: block;
 	}
 }
+
+.alert {
+	position: absolute;
+	background: $tint-dark;
+	bottom: 110px;
+	color: $white;
+	padding: 8px 16px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	text-align: center;
+
+	&.success {
+		left: calc(50% - 80px);
+		width: 160px;
+	}
+	&.fail {
+		left: calc(50% - 150px);
+		width: 300px;
+	}
+}
