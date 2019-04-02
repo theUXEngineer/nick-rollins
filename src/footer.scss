@@ -61,6 +61,36 @@
 	}
 }
 
+.contact-form {
+
+	&-input-wrapper {
+		display: flex;
+	}
+
+	&-input-label {
+		width: 50%;
+	}
+	&-text-label {
+		width: 100%;
+	}
+	&-input {
+		margin: $m-inline;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	&-input, &-text-area {
+		display: block;
+		width: 100%;
+		padding: 16px;
+    	box-sizing: border-box;
+    	border: 0;
+    	border-radius: 8px;
+    	background: $gray-light;
+	}
+}
+
 footer {
 	background: $black;
 	padding: $m-inset-square;
