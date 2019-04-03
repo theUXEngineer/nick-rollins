@@ -64,7 +64,11 @@
 	text-decoration: none;
 
 	&:last-of-type {
-		margin: 0 auto $l;
+		margin: 0 auto 0;
+
+		@media (min-width:800px) {
+			margin: 0 auto $l;
+		}
 	}
 
 	&:before {
