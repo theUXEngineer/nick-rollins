@@ -1,0 +1,25 @@
+@import "../shared/variables";
+.main-content {
+    padding: $m-inset-stretch;
+    
+    @media (min-width: 400px) {
+        padding: $l-inset-square;
+    }
+
+    @media (min-width: 600px) {
+        padding: $xl-inset-squish;
+    }
+}
+
+.article-bg {
+    margin: 0 auto 32px;
+    padding: $l-inset-square;
+
+    @media (min-width: 800px) {
+        padding: $xl-inset-squish;
+    }
+
+    &:last-of-type {
+        margin-right: auto;
+    }
+}
