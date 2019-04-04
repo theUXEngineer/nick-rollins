@@ -1,0 +1,113 @@
+@import "../shared/variables";
+
+.header {
+	color: $white;
+
+	&-nav {
+		display: flex;
+		justify-content: space-between;
+
+		&-list {
+			display: none;
+			font-size: 0;
+
+			@media (min-width: 800px) {
+				display: block;
+			}
+		}
+
+		&-link {
+			color: $white;
+			cursor: pointer;
+			line-height: 1;
+			padding: 24px $m;
+			position: relative;
+			text-decoration: none;
+			text-align: center;
+
+			&:hover {
+				background: $gray-dark;
+			}
+
+			&-logo {
+				width: 60px;
+				padding: 12px 16px 7px;
+
+				&:hover {
+					background: $gray-dark;
+				}
+			}
+		}
+	}
+
+	&-nav-item {
+		display: inline-block;
+
+		&-link {
+			border: none;
+			background: none;
+			display: block;
+			font-size: 16px;
+			width: 90px;
+		}
+	}
+
+	&-contact {
+		background: $primary;
+	}
+}
+
+.logo {
+	width: 75px;
+
+	&-icon {
+		color: $cta;
+	}
+}
+
+.hero {
+	min-height: 425px;
+	position: relative;
+
+	@media(min-width:800px) {
+		min-height: 450px;
+	}
+
+	&-overlay {
+		background: $black;
+		background: rgba(0,0,0,.85);
+		padding: 0 $m;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		@media (min-width: 400px) {
+			padding: 0 $l;
+		}
+	
+		@media (min-width: 600px) {
+			padding: 0 $xl;
+		}
+	}
+
+	&-card {
+		padding: $xl 0 112px;
+
+		@media(min-width:800px) {
+			padding: 112px 0 $xxl;
+		}
+
+		h1, p {
+			color: $white;
+			max-width: 500px;
+		}
+		h1 {
+			@media(max-width: 600px) {
+				font-size: 2rem;
+				line-height: 2.25rem;
+			}
+		}
+	}
+}

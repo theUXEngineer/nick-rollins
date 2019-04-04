@@ -1,49 +1,11 @@
 @import "../shared/variables";
 
-.hero {
-	background-color: $primary;
-	background: url(/dist/images/nick-rollins-hero-mobile-bg.png);
+.hero-001 {
+	background: url('/dist/images/abstract-bg-001.jpg');
 	background-size: cover;
-	background-position: center;
-	min-height: 400px;
-	margin: $xxl-stack;
-	padding: $m-inset-square;
-	position: relative;
-
-	@media (min-width: 400px) {
-		padding: $l-inset-square;
-	}
-
-	@media (min-width: 600px) {
-		padding: $xl-inset-square;
-	}
-
-	@media (min-width: 800px) {
-		background: url(/dist/images/nick-rollins-hero-bg.png);
-		background-position: center;
-		background-size: cover;
-		margin: 0;
-	}
-
-	&-card {
-		position: absolute;
-		bottom: -165px;
-		padding: $l-inset-square;
-		width: calc(100% - 32px);
-
-		@media (min-width: 400px) {
-			width: calc(100% - 64px);
-		}
-
-		@media (min-width: 600px) {
-			padding: $xl-inset-squish;
-			width: calc(100% - 128px);
-		}
-
-		@media (min-width: 800px) {
-			position: static;
-		}
-	}
+	background-position: top;
+	background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .section-new {
@@ -64,10 +26,10 @@
 	text-decoration: none;
 
 	&:last-of-type {
-		margin: 0 auto 0;
+		margin: -100px auto 0;
 
 		@media (min-width:800px) {
-			margin: 0 auto $l;
+			margin: -100px auto $l;
 		}
 	}
 
@@ -85,6 +47,7 @@
 		line-height: 64px;
 		color: #fff;
 		font-weight: 700;
+		transition: all 500ms;
 		transform: rotate(-24deg);
 	}
 
@@ -101,7 +64,12 @@
 		transform: rotate(45deg);
 	}
 
+	h3, p {
+		transition: all 250ms;
+	}
+
 	p {
 		margin: 0;
 	}
+
 }

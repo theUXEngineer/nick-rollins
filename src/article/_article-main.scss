@@ -1,18 +1,19 @@
 @import "../shared/variables";
 .main-content {
-    padding: $m-inset-stretch;
+    padding: $xl $m;
     
     @media (min-width: 400px) {
-        padding: $l-inset-square;
+        padding: $xl $l;
     }
 
     @media (min-width: 600px) {
-        padding: $xl-inset-squish;
+        padding: $xl-inset-square;
     }
 }
 
 .article-bg {
-    margin: 0 auto 32px;
+    margin: -100px auto 32px;
+    position: relative;
     padding: $l-inset-square;
 
     @media (min-width: 800px) {

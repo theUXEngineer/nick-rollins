@@ -44,6 +44,10 @@
 			&-logo {
 				width: 60px;
 				padding: 12px 16px 7px;
+
+				&:hover {
+					background: $tint-light;
+				}
 			}
 		}
 	}
