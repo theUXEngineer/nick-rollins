@@ -28,20 +28,18 @@
 	}
 
 	&-list {
-		margin-top: -128px;
-		margin-bottom: $l;
 
 		& h3 {
 			font-size: 1.5rem;
 		}
+
+		& h3, & p {
+			color: $white;
+		}
 	}
 
 	& h2 {
-		margin: 0 0 160px 0;
-		
-		@media (min-width: 600px) {
-			margin: $xxl-stack;
-		}
+		margin: $xl-stack;;
 	}
 }
 
@@ -112,5 +110,76 @@
 			right: 64px;
 			top: -64px;
 		}
+	}
+}
+.thumb-card {
+	@include box-shadow;
+	background: $white;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: block;
+	margin: $l-stack;
+	padding: 0;
+	transition: all 250ms;
+	width: 100%;
+
+	&:hover {
+		@include box-shadow-grow;
+		cursor: pointer;
+		transform: translateY(-4px);
+	}
+
+	&.third-inline {
+		@media (min-width: 1000px) {
+			width: calc((100%/3) - 16px);
+		}
+	}
+
+	&.fourth-inline {
+		@media (min-width: 800px) {
+			width: calc(50% - 16px);
+		}
+		@media (min-width: 1000px) {
+			width: calc(25% - 16px);
+		}
+	}
+
+	&-link {
+		text-decoration: none;
+	}
+
+	&-thumb {
+		border-radius: 4px 4px 0 0;
+		height: 200px;
+		text-align: center;
+
+		&.ecommerce {
+			background: url('/dist/images/ecommerce-thumb.jpg');
+			background-size: cover;
+			background-position: center;
+		}
+		&.learning {
+			background: url('/dist/images/calendo-thumb.png');
+			background-size: cover;
+			background-position: center;
+		}
+		&.research {
+			background: url('/dist/images/research-thumb.jpg');
+			background-size: cover;
+			background-position: center;
+		}
+		&.side {
+			background: url('/dist/images/side-project-thumb.jpg');
+			background-size: cover;
+			background-position: center;
+		}
+		& h5 {
+			font-size: 2rem;
+			color: $white;
+			line-height: 200px;
+		}
+	}
+	&-content {
+		padding: $l-inset-squish;
 	}
 }
